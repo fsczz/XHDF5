@@ -1,0 +1,45 @@
+#-----------------------------------------------------------------------------
+# REST VOL Config file for compiling against REST VOL build/install directory
+#-----------------------------------------------------------------------------
+@PACKAGE_INIT@
+
+string (TOUPPER @HDF5_VOL_REST_PACKAGE@ HDF5_VOL_REST_PACKAGE_NAME)
+string (TOLOWER @HDF5_VOL_REST_PACKAGE@ hdf5_vol_rest_package_name)
+
+#-----------------------------------------------------------------------------
+# User Options
+#-----------------------------------------------------------------------------
+set (${HDF5_VOL_REST_PACKAGE_NAME}_EXPORT_LIBRARIES @HDF5_VOL_REST_LIBRARIES_TO_EXPORT@)
+
+#-----------------------------------------------------------------------------
+# Directories
+#-----------------------------------------------------------------------------
+set (${HDF5_VOL_REST_PACKAGE_NAME}_INCLUDE_DIR "@PACKAGE_INCLUDE_INSTALL_DIR@")
+
+set (${HDF5_VOL_REST_PACKAGE_NAME}_SHARE_DIR "@PACKAGE_SHARE_INSTALL_DIR@")
+set_and_check (${HDF5_VOL_REST_PACKAGE_NAME}_BUILD_DIR "@PACKAGE_CURRENT_BUILD_DIR@")
+
+#-----------------------------------------------------------------------------
+# Version Strings
+#-----------------------------------------------------------------------------
+set (HDF5_VOL_REST_VERSION_STRING @HDF5_VOL_REST_VERSION_STRING@)
+set (HDF5_VOL_REST_VERSION_MAJOR  @HDF5_VOL_REST_VERSION_MAJOR@)
+set (HDF5_VOL_REST_VERSION_MINOR  @HDF5_VOL_REST_VERSION_MINOR@)
+
+#-----------------------------------------------------------------------------
+# Don't include targets if this file is being picked up by another
+# project which has already built hdf5 as a subproject
+#-----------------------------------------------------------------------------
+if (NOT TARGET "@HDF5_VOL_REST_PACKAGE@")
+  include (@PACKAGE_SHARE_INSTALL_DIR@/@HDF5_VOL_REST_PACKAGE@@HDF5_VOL_REST_PACKAGE_EXT@-targets.cmake)
+endif ()
+
+if (HDF5_VOL_REST_USE_STATIC_LIBRARIES)
+  add_library (${hdf5_vol_rest_package_name} ALIAS ${hdf5_vol_rest_package_name}-static)
+else ()
+  add_library (${hdf5_vol_rest_package_name} ALIAS ${hdf5_vol_rest_package_name}-shared)
+endif ()
+
+set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} @PACKAGE_SHARE_INSTALL_DIR@/..)
+find_package (CURL 7.61 QUIET REQUIRED)
+find_package (YAJL 2.0.4 QUIET REQUIRED)

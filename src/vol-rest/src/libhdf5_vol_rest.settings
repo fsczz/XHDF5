@@ -1,0 +1,51 @@
+	    SUMMARY OF THE REST VOL CONFIGURATION
+	    =====================================
+
+General Information:
+-------------------
+               REST VOL Version: currently
+                  Configured on: Sat Dec  7 17:53:45 CST 2024
+                  Configured by: root@hepslustretest02.ihep.ac.cn
+                    Host system: x86_64-unknown-linux-gnu
+              Uname information: Linux hepslustretest02.ihep.ac.cn 3.10.0-1160.105.1.el7.x86_64 #1 SMP Thu Dec 7 15:39:45 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+                       Byte sex: little-endian
+             Installation point: /usr/vol-rest
+
+Compiling Options:
+------------------
+                     Build Mode: production
+              Debugging Symbols: no
+                        Asserts: no
+                      Profiling: no
+             Optimization Level: high
+
+Linking Options:
+----------------
+                      Libraries: 
+  Statically Linked Executables: 
+                        LDFLAGS: 
+                     RV_LDFLAGS: 
+                     AM_LDFLAGS: 
+                Extra libraries: -ldl -lm -lyajl -lcurl -lzstd -lzstd -lz -llz4
+                       Archiver: ar
+                         Ranlib: ranlib
+
+Languages:
+----------
+                              C: yes
+                     C Compiler: /opt/rh/devtoolset-9/root/usr/bin/gcc
+                       CPPFLAGS:  -I/usr/include
+                    RV_CPPFLAGS: 
+                    AM_CPPFLAGS: 
+                        C Flags: -g -O2
+                     RV C Flags: 
+                     AM C Flags: 
+               Shared C Library: yes
+               Static C Library: yes
+
+
+Features:
+---------
+     VOL connector debug output: @CONNECTOR_DEBUG@
+              cURL debug output: no
+           Using memory checker: no
