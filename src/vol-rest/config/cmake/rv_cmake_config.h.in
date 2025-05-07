@@ -1,0 +1,86 @@
+/* rv_cmake_config.h.in  Used by CMake to generate rest_vol_config.h during the configuration */
+
+#ifndef RV_CONFIG_H_
+#define RV_CONFIG_H_
+
+/* Define if using MinGW */
+#cmakedefine H5_HAVE_MINGW @RV_HAVE_MINGW@
+
+/* Define if on the Windows platform and default WIN32 API */
+#cmakedefine RV_HAVE_WIN32_API @RV_HAVE_WIN32_API@
+
+/* Define if using a Windows compiler (i.e. Visual Studio) */
+#cmakedefine RV_HAVE_VISUAL_STUDIO @RV_HAVE_VISUAL_STUDIO@
+
+/* Define if building universal (internal helper macro) */
+#cmakedefine RV_AC_APPLE_UNIVERSAL_BUILD @RV_AC_APPLE_UNIVERSAL_BUILD@
+
+/* Define if the compiler understands the __func__ keyword */
+#cmakedefine RV_HAVE_C99_FUNC @RV_HAVE_C99_FUNC@
+
+/* Define if Darwin or Mac OS X */
+#cmakedefine RV_HAVE_DARWIN @RV_HAVE_DARWIN@
+
+/* Define if the compiler understands the __FUNCTION__ keyword */
+#cmakedefine RV_HAVE_FUNCTION @RV_HAVE_FUNCTION@
+
+/* Define to 1 if you have the `snprintf' function. */
+#cmakedefine RV_HAVE_SNPRINTF @RV_HAVE_SNPRINTF@
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#cmakedefine RV_HAVE_STDLIB_H @RV_HAVE_STDLIB_H@
+
+/* Define to 1 if you have the <string.h> header file. */
+#cmakedefine RV_HAVE_STRING_H @RV_HAVE_STRING_H@
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#cmakedefine RV_HAVE_SYS_TIME_H @RV_HAVE_SYS_TIME_H@
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#cmakedefine RV_HAVE_SYS_TYPES_H @RV_HAVE_SYS_TYPES_H@
+
+/* Name of package */
+#define RV_PACKAGE "@HDF5_VOL_REST_PACKAGE@"
+
+/* Define to the address where bug reports for this package should be sent. */
+#define RV_PACKAGE_BUGREPORT "@HDF5_VOL_REST_PACKAGE_BUGREPORT@"
+
+/* Define to the full name of this package. */
+#define RV_PACKAGE_NAME "@HDF5_VOL_REST_PACKAGE_NAME@"
+
+/* Define to the full name and version of this package. */
+#define RV_PACKAGE_STRING "@HDF5_VOL_REST_PACKAGE_STRING@"
+
+/* Define to the one symbol short name of this package. */
+#define RV_PACKAGE_TARNAME "@HDF5_VOL_REST_PACKAGE_TARNAME@"
+
+/* Define to the home page for this package. */
+#define RV_PACKAGE_URL "@HDF5_VOL_REST_PACKAGE_URL@"
+
+/* Define to the version of this package. */
+#define RV_PACKAGE_VERSION "@HDF5_VOL_REST_PACKAGE_VERSION_STRING@"
+
+/* Define to 1 if you have the <stdbool.h> header file. */
+#cmakedefine H5_HAVE_STDBOOL_H @H5_HAVE_STDBOOL_H@
+
+/* The size of `bool', as computed by sizeof. */
+#cmakedefine H5_SIZEOF_BOOL @H5_SIZEOF_BOOL@
+
+/* Define to 1 if you have the ANSI C header files. */
+#cmakedefine H5_STDC_HEADERS @H5_STDC_HEADERS@
+
+/* Define if connector debug output should be enabled */
+#cmakedefine RV_CONNECTOR_DEBUG
+
+/* Define if cURL debug output should be enabled */
+#cmakedefine RV_CURL_DEBUG
+
+/* Define if memory tracking should be enabled to
+   track memory leaks and other memory errors within
+   the connector. */
+#cmakedefine RV_TRACK_MEM_USAGE
+
+/* Version number of package */
+#cmakedefine RV_VERSION "@HDF5_VOL_REST_PACKAGE_VERSION_STRING@"
+
+#endif
