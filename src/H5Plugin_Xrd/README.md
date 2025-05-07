@@ -14,9 +14,4 @@ if exec xrootd
 fi
 ```
 
-To disable HTTPS you can remove the cert/key/cafile directives. 
-The targetport in redirection is currently taken from the sysconfig file and uses ```EOS_FST_HTTP_PORT+1000```.
-The protocol used for data transfers is configured on the MGM. By defaul HTTPS access redirects to HTTP on the data server if not modified in the MGM configuration file.
-
-
 
