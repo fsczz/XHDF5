@@ -91,7 +91,7 @@ ldconfig
 cp vol-rest/src/thread_pool.h /usr/vol-rest/include
 ~~~
 
-<!-- ubuntu error: configure: error: cannot compute sizeof (off_t) ;-->
+question：ubuntu error——configure: error: cannot compute sizeof (off_t) ;
 
  Solution:  Manually bypass it. Add "ac_cv_sizeof_off_t=8"  in configure file
 
@@ -174,7 +174,7 @@ http.desthttps yes
 ofs.authlib libxrdlacaroons.so 
 ~~~
 
-#### （3）Start Service
+#### （4）Start Service
 
 ~~~shell
 # Start directly through the command line
