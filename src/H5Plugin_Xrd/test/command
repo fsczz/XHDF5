@@ -1,0 +1,2 @@
+/usr/hdf5/bin/h5cc test.c -o my_application
+/usr/hdf5/bin/h5cc -I /usr/vol-rest/include/ -L /usr/vol-rest/lib/ -lhdf5_vol_rest -lcurl -lyajl test4.c -o my_application4
