@@ -91,7 +91,7 @@ ldconfig
 cp vol-rest/src/thread_pool.h /usr/vol-rest/include
 ~~~
 
-question：ubuntu error——configure: error: cannot compute sizeof (off_t) ;
+ ubuntu error：configure: error: cannot compute sizeof (off_t) ;
 
  Solution:  Manually bypass it. Add "ac_cv_sizeof_off_t=8"  in configure file
 
